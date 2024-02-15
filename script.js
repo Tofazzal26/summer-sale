@@ -11,6 +11,26 @@ const couponCode = document.getElementById('apply-btn');
 
 couponCode.addEventListener('click', function() {
 
+    const inputValue = document.getElementById('input-field').value.toUpperCase();
+
+    if( inputValue === '') {
+        alert('Please Write Coupon Code...');
+    }
+
+    if( total >= 200) {
+        const inputValue = document.getElementById('input-field').value.toUpperCase();
+        const input = inputValue.split(' ').join('');
+
+            if( input === "SELL200"){
+                const discountValue = document.getElementById('discountPrice');
+                const grandTotal = document.getElementById('total');
+                const discount = Number((total * 0.2).toFixed(2));
+                discountValue.innerText = discount;
+                const currentTotal = total - discount;
+                grandTotal.innerText = currentTotal;
+                document.getElementById('input-field').value = '';
+            }
+    }
 })
 
 
@@ -48,12 +68,3 @@ for (let index = 0; index < cards.length; index++) {
 
 
 
-
-
-
-// const couponCode = document.getElementById('apply-btn');
-// couponCode.addEventListener('click', function() {
-//     if( total <= 200) {
-//         return alert('You buy the 200$ product');
-//     }
-// })
