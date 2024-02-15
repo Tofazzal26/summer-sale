@@ -11,13 +11,6 @@ const couponCode = document.getElementById('apply-btn');
 
 couponCode.addEventListener('click', function() {
 
-    const inputValue = document.getElementById('input-field').value.toUpperCase();
-
-    if( inputValue === '') {
-        alert('Please Write Coupon Code...');
-    }
-    
-
 
     if( total >= 200) {
         const inputValue = document.getElementById('input-field').value.toUpperCase();
@@ -32,6 +25,8 @@ couponCode.addEventListener('click', function() {
                 grandTotal.innerText = currentTotal;
                 document.getElementById('input-field').value = '';
             }
+    } else{
+        alert('Please First Shopping Now At Least 200$');
     }
 })
 
