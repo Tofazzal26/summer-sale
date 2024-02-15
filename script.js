@@ -16,6 +16,8 @@ couponCode.addEventListener('click', function() {
     if( inputValue === '') {
         alert('Please Write Coupon Code...');
     }
+    
+
 
     if( total >= 200) {
         const inputValue = document.getElementById('input-field').value.toUpperCase();

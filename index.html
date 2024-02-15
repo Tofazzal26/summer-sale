@@ -457,14 +457,34 @@
                   Total: $<span id="total"></span>
                 </p>
                 <hr class="my-4" />
-                <button class="btn btn-wide bg-[#F11A7B] text-white">
-                  Make Purchase
-                </button>
+                <div>
+                  <!-- Open the modal using ID.showModal() method -->
+                    <button class="bg-[#F11A7B] w-full py-3 rounded-md text-white border border-[#111111]" onclick="my_modal_1.showModal()">Make Purchase</button>
+                    <dialog id="my_modal_1" class="modal">
+                      <div class="modal-box">
+                        <div>
+                            <h3 class="font-bold text-lg">Hello!</h3>
+                            <p class="py-4">Press ESC key or click the button below to close</p>
+                            <div class="modal-action">
+                            <form method="dialog">
+                              <!-- if there is a button in form, it will close the modal -->
+                              <button class="btn">Close</button>
+                            </form>
+                        </div>
+                        </div>
+                      </div>
+                    </dialog>
+              </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section>
+
+      </section>
+
     </main>
 
 <script src="script.js"></script>
